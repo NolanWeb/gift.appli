@@ -1,0 +1,12 @@
+<form method="post" action="prestations/create">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <label for="libelle">libelle</label>
+    <input type="text" id="libelle" name="libelle">
+    <label for="description">Description</label>
+    <textarea id="description" name="description"></textarea>
+    <label for="unite">Unité</label>
+    <input type="text" id="unite" name="unite">
+    <label for="prix">Prix</label>
+    <input type="text" id="prix" name="prix">
+    <input type="submit" value="Create">
+</form>

@@ -9,3 +9,5 @@
 *.iml
 *.xml
 src/vendor/
+.idea/
+/src/vendor/

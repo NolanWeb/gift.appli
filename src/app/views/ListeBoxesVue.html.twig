@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Boxes - Liste
+{% endblock %}
+
+{% block body %}
+
+<figure>
+    <blockquote class="blockquote mx-4 mt-4">
+        <h1>Liste des boxes :</h1>
+    </blockquote>
+</figure>
+
+<hr>
+
+<div class="container mt-4">
+    <div class="row">
+        {% for box in boxes %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-text">{{ box.libelle }}</h5>
+                    <p class="card-text">{{ box.description }}</p>
+                    <a href="{{ url_for('details_box', {'id':box.id}) }}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

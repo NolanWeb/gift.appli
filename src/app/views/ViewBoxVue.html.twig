@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Contenu du Coffret
+{% endblock %}
+
+{% block body %}
+    <h1>Contenu du Coffret</h1>
+    <ul>
+        {% for item in boxContents %}
+            <li>
+                <img src="{{ item.prestation.img }}">
+                <h2>{{ item.prestation.libelle }}</h2>
+                <p>{{ item.prestation.description }}</p>
+                <p>Tarif: {{ item.prestation.tarif }} {{ item.prestation.unite }}</p>
+                <p>Quantité: {{ item.quantity }}</p>
+            </li>
+        {% else %}
+            <li>Aucune prestation dans le coffret.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

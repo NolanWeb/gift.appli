@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Détails de la Boxe
+{% endblock %}
+
+{% block body %}
+    <h1>Détails de la Boxe</h1>
+    <ul>
+        {% for item in boxDetails %}
+            <li>
+                <h2>{{ item.prestation.libelle }}</h2>
+                <p>{{ item.prestation.description }}</p>
+                <p>Tarif: {{ item.prestation.tarif }} {{ item.prestation.unite }}</p>
+                <p>Quantité: {{ item.quantity }}</p>
+            </li>
+        {% else %}
+            <li>Aucune prestation dans le coffret.</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('view_box') }}" class="btn btn-primary">Voir la boxe courante</a>
+{% endblock %}

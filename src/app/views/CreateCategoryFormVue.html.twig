@@ -1,0 +1,8 @@
+<form method="post" action="/categories/create">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <label for="libelle">libelle</label>
+    <input type="text" id="libelle" name="libelle">
+    <label for="description">Description</label>
+    <textarea id="description" name="description"></textarea>
+    <input type="submit" value="Create">
+</form>

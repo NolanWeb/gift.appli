@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Créer une Boxe
+{% endblock %}
+
+{% block body %}
+<form action="{{ url_for('create_box') }}" method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <label for="libelle">Libelle</label>
+    <input type="text" id="libelle" name="libelle" required>
+    <label for="description">Description</label>
+    <textarea id="description" name="description" required></textarea>
+    <label for="kdo">Kdo</label>
+    <input type="text" id="kdo" name="kdo">
+    <label for="message_kdo">Message Kdo</label>
+    <input type="text" id="message_kdo" name="message_kdo">
+    <input type="submit" value="Create">
+</form>
+{% endblock %}

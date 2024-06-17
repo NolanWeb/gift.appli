@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Liste des Prestations
+{% endblock %}
+
+{% block body %}
+    <h1>Liste des Prestations</h1>
+    <ul>
+        {% for prestation in prestations %}
+            <li>
+                <h2>{{ prestation.libelle }}</h2>
+                <p>{{ prestation.description }}</p>
+                <p>Tarif: {{ prestation.tarif }} {{ prestation.unite }}</p>
+                <form action="{{ url_for('add_prestation') }}" method="post">
+                                    <input type="hidden" name="prestation_id" value="{{ prestation.id }}">
+                                    <input type="number" name="quantity" value="1" min="1">
+                                    <button type="submit" class="btn btn-primary">Ajouter au coffret</button>
+                                </form>
+            </li>
+            <a href="{{ url_for('prestation', {'id':prestation.id}) }}" class="btn btn-primary">View Details</a>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+
+    {% block scripts %}
+    {% endblock %}

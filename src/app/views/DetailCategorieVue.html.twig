@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Détails de la Catégorie
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1>Détails de la Catégorie : {{ categ.libelle }}</h1>
+        <hr>
+        <p><strong>Description :</strong> {{ categ.description }}</p>
+
+        <h2>Prestations de cette Catégorie</h2>
+        <ul class="list-group mt-4">
+            {% for prestation in prestations %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5>{{ prestation.libelle }}</h5>
+                        <p>{{ prestation.description }}</p>
+                    </div>
+                    <span class="badge badge-primary badge-pill">{{ prestation.tarif }} €</span>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <a href="{{ url_for('categories') }}" class="btn btn-secondary mt-4">Retour à la liste des catégories</a>
+    </div>
+{% endblock %}

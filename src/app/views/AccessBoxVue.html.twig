@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accès au Coffret{% endblock %}
+
+{% block content %}
+<h1>Accès au Coffret</h1>
+<h2>{{ box.nom }}</h2>
+<p>Description : {{ box.description }}</p>
+{% if box.is_gift %}
+<p>Message : {{ box.message }}</p>
+{% endif %}
+<h3>Prestations</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Quantité</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for prestation in box.prestations %}
+        <tr>
+            <td>{{ prestation.nom }}</td>
+            <td>{{ prestation.pivot.quantity }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

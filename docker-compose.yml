@@ -1,0 +1,42 @@
+version: "3.9"
+
+networks:
+  td4.net:
+    driver: bridge
+
+services:
+  php:
+    image: canals/php:latest
+    ports:
+      - "52800:80"
+    volumes :
+      - "./public:/var/www/html"
+      - "./src:/var/www/src"
+    working_dir: "/var/www/html"
+    networks:
+      - td4.net
+    depends_on:
+      - sql
+
+
+
+  sql:
+    image: mariadb:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD${MYSQL_PASSWORD}
+    ports:
+      - "33030:3306"
+    networks:
+      td4.net:
+        aliases:
+          - sql.db
+          - sql326.net
+  adminer:
+    image: adminer
+    ports:
+      - "60000:8080"
+    command: php -S 0.0.0.0:8080 -t /var/www/html
+    networks:
+      - td4.net

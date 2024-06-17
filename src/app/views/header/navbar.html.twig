@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+	<div class="container-fluid">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarColor02">
+			<ul class="navbar-nav me-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="{{ url_for('categories') }}">Catégories</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ url_for('prestations') }}">Préstations</a>
+				</li>
+				<li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('boxes') }}">Boxes</a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('create_category_form') }}">Créer une catégorie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('create_box_form') }}">Créer une boxe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('signin') }}">Connexion</a>
+                </li>
+			</ul>
+		</div>
+	</div>
+</nav>

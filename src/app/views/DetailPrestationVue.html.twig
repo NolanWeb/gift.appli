@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Détails de la Prestation
+{% endblock %}
+
+{% block body %}
+    <h1>Détail de la Prestation</h1>
+        <h2>{{ prestation.libelle }}</h2>
+        <p>{{ prestation.description }}</p>
+        <p>Tarif: {{ prestation.tarif }} {{ prestation.unite }}</p>
+        <img src="{{ base_path() }}/{{ images }}/{{ prestation.img }}"></img>
+        <a href="{{ url_for('prestations') }}" class="btn btn-primary">Retour à la liste</a>
+{% endblock %}
