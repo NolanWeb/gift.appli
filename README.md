@@ -20,3 +20,6 @@ De plus, nous avons coder tous ensemble grâce à la technologie 'Code with me' 
 - Création d'un coffret vide
 - Sign in
 - Accéder à la boxe courante
+
+## Accéder au projet sur docketu
+Nous n'avons pas fait d'accueil, voici la route par défaut à mettre dans l'url : http://docketu.iutnc.univ-lorraine.fr:52800/categories
