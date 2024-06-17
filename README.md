@@ -7,11 +7,11 @@ MyGiftBox.net
 - MALGRAS MARTINS Nolan
 - RONOT Martin
 
-### Informations sur le code
+## Informations sur le code
 Nous avons coder certaines fonctionnalités en avance sans les mettre en place. Le code est présent mais non implenté.
 De plus, nous avons coder tous ensemble grâce à la technologie 'Code with me' permettant de coder ensemble sur le même projet, ce qui fait que seul Nolan a push le projet mais chacun à effectué une fonctionnalité.
 
-#### Fonctionnalités fonctionnelles :
+## Fonctionnalités fonctionnelles :
 - Liste de catégories
 - Liste de prestations
 - Liste des boxes
