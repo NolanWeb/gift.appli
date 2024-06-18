@@ -15,6 +15,7 @@ De plus, nous avons coder tous ensemble grâce à la technologie 'Code with me' 
 - Liste de catégories
 - Liste de prestations
 - Liste des boxes
+- Détails d'une catégorie
 - Détails d'une prestation
 - Tri par prix
 - Création d'un coffret vide
